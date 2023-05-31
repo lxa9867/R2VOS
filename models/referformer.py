@@ -527,27 +527,6 @@ class ReferFormer(nn.Module):
         # this is the total query number in all frames
         _, num_queries = reference_points.shape[:2]
         q = num_queries // t  # num_queries_per_frame
-
-        vis_proto = False
-        if vis_proto:
-            # _, _, c_, h_, w_ = mask_features.shape
-            # vision_features_1 = np.reshape(np.transpose(mask_features.cpu().numpy()[0], (0, 2, 3, 1)), (-1, c_))
-            # pca = PCA(n_components=3).fit_transform(vision_features_1)
-            # pca = np.reshape(pca, (t, h_, w_, 3))
-            # pca = (pca - np.min(pca)) / (np.max(pca) - np.min(pca))
-            # for i in range(1):
-            #     cv2.imwrite(f'vis/tmp/mask_{i}_proto_dfm.png', pca[i] * 255)
-            _, _, c_, h_, w_ = mask_features.shape
-            vision_features_1 = np.reshape(np.transpose(mask_features.cpu().numpy()[0], (0, 2, 3, 1)), (-1, c_))
-            pca = PCA(n_components=2).fit_transform(vision_features_1)
-            pca = np.reshape(pca, (t, h_, w_, 2))
-            # pca = (pca - np.min(pca)) / (np.max(pca) - np.min(pca))
-            for i in range(1):
-                for number in range(2):
-                    mask_proto = (pca[i,...,number] - np.min(pca[i,...,number])) / (np.max(pca[i,...,number]) - np.min(pca[i,...,number]))
-                    cv2.imwrite(f'vis/tmp/mask_{i}_{number}_proto_dfm.png', mask_proto * 255)
-
-
         # prepare reference points in image size (the size is input size to the model)
         new_reference_points = []
         for i in range(b):

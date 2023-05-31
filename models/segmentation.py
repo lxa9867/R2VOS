@@ -471,22 +471,6 @@ class DualCrossModalFPNDecoder(nn.Module):
                 y = cur_fpn
                 y_ = self.dyn_conv(cur_fpn)
                 y_ = torch.einsum('ichw,ijc -> ijchw', y_, filter)
-                # vis_dyn = True
-                # if vis_dyn:
-                #     # TODO: Vis dyn conv
-                #     for i in range(1):
-                #         frame = cv2.imread(f'vis/tmp/{i}.png')
-                #         frame_hw = frame.shape[:2]
-                #         for j in range(3):
-                #             vis_feat = torch.nn.functional.relu(torch.sum(y_[i, j], dim=0))
-                #             # vis_feat = y_[i, j, 100].abs()
-                #             vis_feat /= vis_feat.max()
-                #             vis_feat *= 255
-                #             vis_feat = vis_feat.detach().cpu().numpy().astype(np.uint8)
-                #             vis_feat = cv2.resize(vis_feat, frame_hw[::-1], interpolation=cv2.INTER_NEAREST)
-                #             vis_feat = cv2.applyColorMap(vis_feat, cv2.COLORMAP_HOT)
-                #             vis_feat = cv2.addWeighted(frame, 0, vis_feat, 1, 0.0)
-                #             cv2.imwrite(f'vis/tmp/frame_{i}_filter_{j}.png', vis_feat)
                 y_ = rearrange(y_, 'i j c h w -> i (j c) h w')
                 y_ = self.pool_conv(y_)
                 y = output_conv(y+y_)
@@ -772,22 +756,6 @@ class RecurrentDualCrossModalFPNDecoder(nn.Module):
                     y = cur_fpn
                     y_ = self.dyn_conv_list[stage](cur_fpn)
                     y_ = torch.einsum('ichw,ijc -> ijchw', y_, filter)
-                    # vis_dyn = True
-                    # if vis_dyn:
-                    #     # TODO: Vis dyn conv
-                    #     for i in range(t):
-                    #         frame = cv2.imread(f'vis/tmp/{i}.png')
-                    #         frame_hw = frame.shape[:2]
-                    #         for j in range(3):
-                    #             vis_feat = torch.nn.functional.relu(-torch.sum(y_[i, j], dim=0))
-                    #             # vis_feat = y_[i, j, 100].abs()
-                    #             vis_feat /= vis_feat.max()
-                    #             vis_feat *= 255
-                    #             vis_feat = vis_feat.detach().cpu().numpy().astype(np.uint8)
-                    #             vis_feat = cv2.resize(vis_feat, frame_hw[::-1], interpolation=cv2.INTER_NEAREST)
-                    #             vis_feat = cv2.applyColorMap(vis_feat, cv2.COLORMAP_HOT)
-                    #             vis_feat = cv2.addWeighted(frame, 0, vis_feat, 1, 0.0)
-                    #             cv2.imwrite(f'vis/tmp/frame_{i}_filter_{j}_stage_{stage}.png', vis_feat)
                     y_ = rearrange(y_, 'i j c h w -> i (j c) h w')
                     y_ = self.pool_conv_list[stage](y_)
                     if stage == 0:
