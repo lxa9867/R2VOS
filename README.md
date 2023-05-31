@@ -23,6 +23,9 @@ python setup.py build install
 cd ../..
 ```
 
+# Docker
+You may try [docker](https://hub.docker.com/r/ang9867/refer) to quick start.
+
 # Weight
 Please download and put the [checkpoint.pth](https://drive.google.com/file/d/1gknDDMxWKqZ7yPuTh1fome1-Ba4f_G9K/view?usp=share_link) in the main folder.
 
