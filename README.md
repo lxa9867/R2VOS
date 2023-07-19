@@ -9,7 +9,8 @@ Referring Video Object Segmentation (R-VOS) is a challenging task that aims to s
 > Xiang Li, Jinglu Wang, Xiaohao Xu, Xiao Li, Yan Lu, Bhiksha Raj
 
 # Updates
-- **(2023-05-30)**  Demo released
+- **(2023-05-30)** Demo released.
+- **(2023-07-13)** R2VOS is accepted to ICCV 2023!
 
 # Install
 
