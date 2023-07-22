@@ -4,9 +4,9 @@ Referring Video Object Segmentation (R-VOS) is a challenging task that aims to s
 
 <p align="center"><img src="illustration.jpg" width="700"/></p>
 
-> [**Robust Referring Video Object Segmentation with Cyclic Structural Consistency**](https://arxiv.org/abs/2207.01203)
+> [**Towards Robust Referring Video Object Segmentation with Cyclic Relational Consistency**](https://arxiv.org/abs/2207.01203)
 >
-> Xiang Li, Jinglu Wang, Xiaohao Xu, Xiao Li, Yan Lu, Bhiksha Raj
+> Xiang Li, Jinglu Wang, Xiaohao Xu, Xiao Li, Bhiksha Raj, Yan Lu 
 
 # Updates
 - **(2023-05-30)** Code released.
