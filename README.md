@@ -40,11 +40,12 @@ python demo.py --with_box_refine --binary --freeze_text_encoder --output_dir=out
 ## Citation
 
 ```
-@article{li2022r,
-  title={R\^{} 2VOS: Robust Referring Video Object Segmentation via Relational Multimodal Cycle Consistency},
-  author={Li, Xiang and Wang, Jinglu and Xu, Xiaohao and Li, Xiao and Lu, Yan and Raj, Bhiksha},
-  journal={arXiv preprint arXiv:2207.01203},
-  year={2022}
+@inproceedings{li2023robust,
+  title={Robust referring video object segmentation with cyclic structural consensus},
+  author={Li, Xiang and Wang, Jinglu and Xu, Xiaohao and Li, Xiao and Raj, Bhiksha and Lu, Yan},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={22236--22245},
+  year={2023}
 }
 ```
 
