@@ -26,7 +26,6 @@ You may try [docker](https://hub.docker.com/r/ang9867/refer) to quick start.
 # Weights
 Please download and put the [checkpoint.pth](https://drive.google.com/file/d/1gknDDMxWKqZ7yPuTh1fome1-Ba4f_G9K/view?usp=share_link) in the main folder.
 
-
 # Run demo:
 Inference on images in the demo/demo_examples.
 ```
@@ -38,8 +37,11 @@ If you want to evaluate on Ref-YTVOS, you may try inference_ytvos.py or inferenc
 ```
 python demo.py --with_box_refine --binary --freeze_text_encoder --output_dir=output/eval --resume=checkpoint.pth --backbone resnet50 --ngpu 1 --use_cycle --mix_query --neg_cls --is_eval --use_cls --ytvos_path=/data/ref-ytvos
 ```
+# Related works for robust multimodal video segmentation:
+> [R2-Bench: Benchmarking the Robustness of Referring Perception Models under Perturbations
+]([https://arxiv.org/abs/2207.01203](https://arxiv.org/abs/2403.04924))
+> [Towards Robust Audiovisual Segmentation in Complex Environments with Quantization-based Semantic Decomposition](https://arxiv.org/abs/2310.00132)
 ## Citation
-
 ```
 @inproceedings{li2023robust,
   title={Robust referring video object segmentation with cyclic structural consensus},
