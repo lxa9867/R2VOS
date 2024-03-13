@@ -39,9 +39,9 @@ python inference_ytvos.py --with_box_refine --binary --freeze_text_encoder --out
 ```
 # Related works for robust multimodal video segmentation:
 > [R2-Bench: Benchmarking the Robustness of Referring Perception Models under Perturbations
-](https://arxiv.org/abs/2403.04924)
+](https://arxiv.org/abs/2403.04924), Arxiv 2024
 
-> [Towards Robust Audiovisual Segmentation in Complex Environments with Quantization-based Semantic Decomposition](https://arxiv.org/abs/2310.00132)
+> [Towards Robust Audiovisual Segmentation in Complex Environments with Quantization-based Semantic Decomposition](https://arxiv.org/abs/2310.00132), CVPR 2024
 ## Citation
 ```
 @inproceedings{li2023robust,
