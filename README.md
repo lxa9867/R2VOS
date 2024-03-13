@@ -1,8 +1,8 @@
-<p align="center"><img src="illustration.jpg" width="700"/></p>
-
 > [**Towards Robust Referring Video Object Segmentation with Cyclic Relational Consistency**](https://arxiv.org/abs/2207.01203)
 >
-> Xiang Li, Jinglu Wang, Xiaohao Xu, Xiao Li, Bhiksha Raj, Yan Lu 
+> Xiang Li, Jinglu Wang, Xiaohao Xu, Xiao Li, Bhiksha Raj, Yan Lu
+
+<p align="center"><img src="illustration.jpg" width="700"/></p>
 
 # Updates
 - **(2023-05-30)** Code released.
