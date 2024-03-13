@@ -40,7 +40,8 @@ python demo.py --with_box_refine --binary --freeze_text_encoder --output_dir=out
 # Related works for robust multimodal video segmentation:
 > [R2-Bench: Benchmarking the Robustness of Referring Perception Models under Perturbations
 ]([https://arxiv.org/abs/2207.01203](https://arxiv.org/abs/2403.04924))
-> [Towards Robust Audiovisual Segmentation in Complex Environments with Quantization-based Semantic Decomposition](https://arxiv.org/abs/2310.00132)
+
+> [Towards Robust Audiovisual Segmentation in Complex Environments with Quantization-based Semantic Decomposition]([https://arxiv.org/abs/2310.00132])
 ## Citation
 ```
 @inproceedings{li2023robust,
