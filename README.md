@@ -35,7 +35,9 @@ python demo.py --with_box_refine --binary --freeze_text_encoder --output_dir=out
 
 # Inference:
 If you want to evaluate on Ref-YTVOS, you may try inference_ytvos.py or inference_ytvos_segm.py (if you encounter OOM for the entire video inference).
-
+```
+python demo.py --with_box_refine --binary --freeze_text_encoder --output_dir=output/eval --resume=checkpoint.pth --backbone resnet50 --ngpu 1 --use_cycle --mix_query --neg_cls --is_eval --use_cls --ytvos_path=/data/ref-ytvos
+```
 ## Citation
 
 ```
